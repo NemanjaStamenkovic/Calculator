@@ -19,7 +19,7 @@ def calc():
     for x in operations:
         print(x)
     operator = input("Choose an operator: ")
-
+    
     calculationFunction = operations[operator]
     answer = calculationFunction(n1, n2)
     print(f"{n1} {operator} {n2} = {answer}")
@@ -27,6 +27,9 @@ def calc():
     while shouldCont == "y":
         n1 = answer
         n2 = int(input("What is the second Number?: "))
+        for x in operations:
+            print(x)
+        operator = input("Choose an operator: ")
         calculationFunction = operations[operator]
         answer = calculationFunction(n1, n2)
         print(f"{n1} {operator} {n2} = {answer}")
